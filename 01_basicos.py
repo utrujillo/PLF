@@ -34,3 +34,9 @@ print( menu %(cadena) )
 nombre = "Juan"
 numero = 2.5
 "Hey [nombre] verificando si [numero] es numero?"
+print("Hey %s, verificando si %f es numero" %(nombre, numero))
+
+# print( "El tipo de dato es: %s" %( type(numero) ) )
+
+texto = input("Escribe un texto: ")
+print( texto )
