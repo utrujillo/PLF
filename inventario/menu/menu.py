@@ -16,7 +16,7 @@ def seleccion_submenu( opcion ):
     else:
         print( 'Opcion no valida' )
 
-def submenu():
+def submenu_usuario():
     submenu = '''
     ---------------------------------------
         Modulo de Usuarios
