@@ -2,17 +2,25 @@ from menu.menu import menu, seleccion_submenu
 from clases.usuario import Usuario
 
 def run():
-    menu()
-    opcion = int(input('Selecciona una opcion: '))
-
-    seleccion_submenu( opcion )
-    opcion_submenu = int(input('Que operacion deseas realizar: '))
-
+    salir = False
     usuario = Usuario()
     
-    if( opcion_submenu  == 1 ):
-        usuario.listar_todo()
+    while salir == False:
+        # menu()
+        # opcion = int(input('Selecciona una opcion: '))
 
+        seleccion_submenu( 3 )
+        opcion_submenu = int(input('Que operacion deseas realizar: '))
+        
+        if( opcion_submenu  == 1 ):
+            usuario.listar_todo()
+        elif ( opcion_submenu == 2 ):
+            usuario.crear()
+        
+        terminar = input('Deseas realizar otra operacion? S/N ')
+        print( terminar, salir )
+        if( terminar == "S" ):
+            salir = True
 
 
 
