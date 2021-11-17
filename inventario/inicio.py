@@ -6,10 +6,10 @@ def run():
     usuario = Usuario()
     
     while salir == False:
-        # menu()
-        # opcion = int(input('Selecciona una opcion: '))
+        menu()
+        opcion = int(input('Selecciona una opcion: '))
 
-        seleccion_submenu( 3 )
+        seleccion_submenu( opcion )
         opcion_submenu = int(input('Que operacion deseas realizar: '))
         
         if( opcion_submenu  == 1 ):
@@ -18,7 +18,7 @@ def run():
             usuario.crear()
         
         terminar = input('Deseas realizar otra operacion? S/N ')
-        print( terminar, salir )
+        
         if( terminar == "S" ):
             salir = True
 
