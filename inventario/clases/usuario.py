@@ -60,4 +60,10 @@ Listado de usuarios encontrados
 		'''
 		print( mensaje )
 		print( coincidencias )
+	
+	def buscar_id(self):
+		os.system('cls')
+		id_buscar = int( input("ID a buscar: ") )
+		coincidencia = self.usuarios.query('id == {0}'.format(id_buscar))
+		return coincidencia
 

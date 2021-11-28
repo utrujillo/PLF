@@ -18,6 +18,9 @@ def run():
             usuario.crear()
         elif ( opcion_submenu == 3 ):
             usuario.buscar_texto()
+        elif ( opcion_submenu == 4 ):
+            coincidencia = usuario.buscar_id()
+            print( coincidencia )
         
         terminar = input('Deseas realizar otra operacion? S/N ')
         
