@@ -19,10 +19,8 @@ def run():
         
         terminar = input('Deseas realizar otra operacion? S/N ')
         
-        if( terminar == "S" ):
+        if( terminar == "N" or terminar == "n" ):
             salir = True
-
-
 
 if __name__ == '__main__':
     run()
