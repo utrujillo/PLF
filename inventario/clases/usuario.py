@@ -5,9 +5,9 @@ from clases.tipo_usuario import TipoUsuario
 class Usuario:
 
 	def __init__(self):
-		# ( "Administrador", "Inventario", "Ventas" )
 		self.FILE = 'C:/Users/utrujillo/Desktop/PLF/inventario/files/usuario.xlsx'
 		self.usuario = {
+			"id": 0,
 			"nombre": "",
 			"apellidos": "",
 			"tipo_usuario": "",
@@ -43,6 +43,8 @@ Listado de usuarios
 			self.usuario["tipo_usuario"] = ""
 		else:
 			self.usuario["tipo_usuario"] = TipoUsuario(tipo_usuario)
+		
+		self.usuario["id"] = len(self.usuarios) + 1
 		
 		self.usuarios = self.usuarios.append( self.usuario, ignore_index = True )
 		self.usuarios.to_excel( self.FILE )
