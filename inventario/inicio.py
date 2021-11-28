@@ -16,6 +16,8 @@ def run():
             usuario.listar_todo()
         elif ( opcion_submenu == 2 ):
             usuario.crear()
+        elif ( opcion_submenu == 3 ):
+            usuario.buscar_texto()
         
         terminar = input('Deseas realizar otra operacion? S/N ')
         

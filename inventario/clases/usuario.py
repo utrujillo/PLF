@@ -21,15 +21,16 @@ class Usuario:
 		print("Constructor de la clase usuario")
 	
 	def listar_todo(self):
+		os.system('cls')
 		mensaje = '''
 Listado de usuarios
 **************************
-
 		'''
 		print(mensaje)
 		print(self.usuarios )
 	
 	def crear(self):
+		os.system('cls')
 		self.usuario["nombre"] = input("Nombre: ")
 		self.usuario["apellidos"] = input("Apellidos: ")
 
@@ -44,7 +45,17 @@ Listado de usuarios
 			self.usuario["tipo_usuario"] = TipoUsuario(tipo_usuario)
 		
 		self.usuarios = self.usuarios.append( self.usuario, ignore_index = True )
-
-		os.system('cls')
 		self.usuarios.to_excel( self.FILE )
 		print( "La informacion %s fue almacenada con exito" %( self.usuario ) )
+	
+	def buscar_texto(self):
+		os.system('cls')
+		texto_buscar = input("Escribe el nombre a buscar: ")
+		coincidencias = self.usuarios.query('nombre.str.contains("{0}") or apellidos.str.contains("{1}")'.format(texto_buscar, texto_buscar), engine='python')
+		mensaje = '''
+Listado de usuarios encontrados
+**************************
+		'''
+		print( mensaje )
+		print( coincidencias )
+
