@@ -77,6 +77,18 @@ Listado de usuarios encontrados
 		else:
 			print("El usuario no fue encontrado...")
 	
+	def eliminar(self):
+		os.system('cls')
+		usuario_eliminar = usuario = self.buscar_id()
+		print( "Usurio a eliminar" )
+		print( usuario_eliminar )
+		verificar = input("Estas seguro de querer eleminar ? S/N ")
+
+		if( verificar == "S" or verificar == "s" ):
+			self.usuarios = self.usuarios.drop( usuario_eliminar.index )
+			self.usuarios.to_excel( self.FILE )
+			print( "Usuario eliminado..." )
+	
 	def solicitar_usuario(self):
 		self.usuario["nombre"] = input("Nombre: ")
 		self.usuario["apellidos"] = input("Apellidos: ")

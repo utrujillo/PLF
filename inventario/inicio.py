@@ -28,6 +28,8 @@ Identificador encontrado
 			print( coincidencia )
 		elif( opcion_submenu == 5 ):
 			usuario.actualizar()
+		elif( opcion_submenu == 6 ):
+			usuario.eliminar()
 
 		terminar = input('Deseas realizar otra operacion? S/N ')
 
